@@ -23,6 +23,21 @@ export class ToastService {
 		);
 	}
 
+    success(content) {
+        if (!content) {
+            return false;
+        }
+
+        return this.$mdToast.show(
+            this.$mdToast.simple()
+                .content(content)
+                .position(this.position)
+                .theme('success')
+                .action(this.action)
+                .hideDelay(this.delay)
+        );
+    }
+
 	error(content) {
 		if (!content) {
 			return false;

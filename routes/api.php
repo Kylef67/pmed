@@ -25,3 +25,6 @@ Route::post('auth/password/reset', 'Auth\PasswordResetController@reset');
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/category' , 'CategoryController@index');
+Route::post('/category/add' , 'CategoryController@store');

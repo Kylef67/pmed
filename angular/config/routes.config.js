@@ -66,5 +66,13 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                     templateUrl: getView('reset-password')
                 }
             }
+        })
+        .state('app.categories', {
+            url: '/categories',
+            views: {
+                'main@': {
+                    templateUrl: getView('category')
+                }
+            }
         });
 }

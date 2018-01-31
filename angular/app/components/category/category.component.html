@@ -1,0 +1,22 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>Category Form</h2>
+    </div>
+</md-toolbar>
+<md-content>
+    <form ng-submit="vm.save()" layout="column" layout-padding="5">
+        <md-input-container flex="100">
+            <label for="category">Category</label>
+            <input id="category" type="text" ng-model="vm.data.name">
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label for="description">Description</label>
+            <textarea name="description" ng-model="vm.data.description" id="description" cols="30" rows="10"></textarea>
+        </md-input-container>
+
+        <div layout="row" layout-align="end center">
+            <md-button type="submit" class="md-primary md-raised">Save</md-button>
+        </div>
+    </form>
+</md-content>
