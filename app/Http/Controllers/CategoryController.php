@@ -16,10 +16,14 @@ class CategoryController extends Controller
     {
         //
         $response = [
-            'data' => compact(Category::all()),
+            'data' => [],
             'message' => '',
             'status' => 200
         ];
+
+        //echo 'ew'; exit();
+
+        $response['data'] = Category::all();
 
         return response()->success($response);
     }

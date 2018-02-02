@@ -1,3 +1,4 @@
+import {CategoryListComponent} from './app/components/category-list/category-list.component';
 import {CategoryComponent} from './app/components/category/category.component';
 import {AppHeaderComponent} from './app/components/app-header/app-header.component';
 import {AppRootComponent} from './app/components/app-root/app-root.component';
@@ -8,6 +9,7 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
+	.component('categoryList', CategoryListComponent)
 	.component('category', CategoryComponent)
 	.component('appHeader', AppHeaderComponent)
 	.component('appRoot', AppRootComponent)

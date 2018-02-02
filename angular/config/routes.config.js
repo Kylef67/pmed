@@ -68,10 +68,18 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
             }
         })
         .state('app.categories', {
-            url: '/categories',
+            url: '/category/add',
             views: {
                 'main@': {
                     templateUrl: getView('category')
+                }
+            }
+        })
+        .state('app.categories-list', {
+            url: '/categories',
+            views: {
+                'main@': {
+                    templateUrl: getView('category-list')
                 }
             }
         });
