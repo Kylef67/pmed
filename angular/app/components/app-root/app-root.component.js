@@ -13,10 +13,11 @@ class AppRootController {
     }
 
     registerServiceWorker() {
+
         if (!('serviceWorker' in navigator)) {
             return false;
         }
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register(window.location.origin + ''+ window.location.pathname + '/service-worker.js')
             .then(this.handleRegistration.bind(this));
     }
 

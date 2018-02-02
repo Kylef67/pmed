@@ -1,0 +1,16 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            Category List
+        </h2>
+    </div>
+</md-toolbar>
+<md-content layout-padding="5" layout="column">
+    <md-list-item class="md-2-line" ng-repeat-start="category in vm.categories">
+        <div class="md-list-item-text">
+            <h3 >{{ category.name }}</h3>
+            <p>{{ category.description }}</p>
+        </div>
+    </md-list-item>
+    <md-divider ng-repeat-end></md-divider>
+</md-content>
